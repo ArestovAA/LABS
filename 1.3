@@ -1,27 +1,28 @@
-#include <math.h>
 #include <stdio.h>
-#include <stdlib.h>
 
-int get_power(int number, int power)
-{
-  if (number==0)
-  {
-    return 1;
-  }
-  else if (number==1)
-  {
-    return power;
-  }
-  else
-  {
-    return pow( number * number, power /2)*number;
-  }
-}
+int get_power(int number, int power);
 
 int main()
 {
-  int number=2, power=6;
-  scanf("%d%d", &number, &power);
-  printf("%d", get_power(number, power));
+  int power_of_number;
+  int number;
+  printf("number: ");
+  scanf("%d", &number);
+  printf("power: ");
+  scanf("%d", &power_of_number);
+  printf("%d\n",get_power(number, power_of_number));
+
   return 0;
+}
+int get_power(int number, int power)
+{
+  int i;
+  int result;
+  result = 1;
+  for (i = 1; i <= power; ++i)
+  {
+    result = result * number;
+  }
+  
+  return result;
 }
