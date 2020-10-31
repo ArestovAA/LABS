@@ -48,7 +48,7 @@ void power(int number, int source, int target)
   {
     static int power = 1;
     result_in_ten = result_in_ten + number % 10 * power;
-    power  *= source;
+    power *= source;
     number /= 10;
     if (number <= 0) 
     {
