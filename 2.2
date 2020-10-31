@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h> // for exit
-int cache[500]; // cache program
+long long cache[500]; // cache program
 
 long long get_fibbonachi_via_recursion(int number)
 {
@@ -29,10 +29,10 @@ int main()
     printf("error");
     exit(0);
   }
-  n++; // n++ becouse count = 1, if count = 0 program failed 
+  n++; // n++ because count = 1, if count = 0 program failed 
   for (int count = 1; count < n; count++)
   {
-    printf("%llu\t", get_fibbonachi_via_recursion(count));
+    printf("%llu\n", get_fibbonachi_via_recursion(count));
   }
   return 0;
 }
