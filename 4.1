@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+  int num; // размер массива
+  int *ptr;
+  printf("Введите количество элементов: ");
+  scanf("%d",&num); 
+  ptr = (int*)malloc(num * sizeof(int));
+  for (int i = 0; i < num; i++)
+  {
+    printf("ptr[%d] = ", i);
+    scanf("%d", &ptr[i]);
+  }
+  for (int i = 0; i < num; i++)
+  {
+    printf("%d ", ptr[i]);
+  }
+  free(ptr);
+  getchar(); getchar();
+  return 0;
+}
