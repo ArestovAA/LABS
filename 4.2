@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-
 int main()
 {
   int num; // размер массива
@@ -17,7 +14,11 @@ int main()
   {
     if ((ptr[i] %2) != 0)
     {
-      printf("%d ", ptr[i]);
+      printf("%d нечетное ", ptr[i]);
+    }
+    else 
+    {
+      printf("%d четное ", ptr[i]);
     }
   }
   free (ptr);
